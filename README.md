@@ -20,3 +20,18 @@ Log输出类, 可以设置Log输出级别:
 如果只是要显示一个简单的广本,可以用`ToastHelper.show`系列方法, 如果要自定义Toast, 比如设置Gravity, 设置Toast广本颜色等, 可以使用`ToastHelper.Builder`类.
 
 向`ToastHelper.show`方法或`ToastHelper.Builder`传入`cancelPrevious`参数可以在这个Toast显示之前取消掉上一个Toast(如果有Toast正在显示的话), **前提是当前正在显示的Toast是通过`ToastHelp.show`或`ToastHelper.Build.show`显示出来的**.
+
+##License
+Copyright 2014 AngelDevil
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
