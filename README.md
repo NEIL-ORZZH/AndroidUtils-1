@@ -2,6 +2,7 @@ AndoridUtils
 ============
 
 Android开发中常用到的一些工具类.
+
 自定义的Preference中用到了PopupMenu，需要添加support-v7-compat.
 
 ##Logger
@@ -27,9 +28,9 @@ Logger.disableLog
 向`ToastHelper.show`方法或`ToastHelper.Builder`传入`cancelPrevious`参数可以在这个Toast显示之前取消掉上一个Toast(如果有Toast正在显示的话), **前提是当前正在显示的Toast是通过`ToastHelp.show`或`ToastHelper.Build.show`显示出来的**.
 
 ##Preference
-`LinePreferenceCategory`可以在Preference中只显示一条线。
-`SpinnerPreference`，Title和Summary左右排列，点击Summary时弹出一个菜单
-`CustomTextPreference`，可以自定义Preference中Title和Summary的字体颜色大小
+* `LinePreferenceCategory`可以在Preference中只显示一条线。
+* `SpinnerPreference`，Title和Summary左右排列，点击Summary时弹出一个菜单
+* `CustomTextPreference`，可以自定义Preference中Title和Summary的字体颜色大小
 
 ##License
 >Copyright 2014 AngelDevil
