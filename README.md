@@ -33,7 +33,7 @@ Logger.disableLog
 * `CustomTextPreference`，可以自定义Preference中Title和Summary的字体颜色大小
 
 ##Dialog
-`EditTextDialog`，仅包含一个EditText的Dialog，用于接收用户输入，抽象类，子灰必须实现`onInputFinished`用于获取输入内容，`onCancelInput`收到取消通知（点击对话框外，按Back键，按取消按钮），不要设置`onCancelListener`
+`EditTextDialog`，仅包含一个EditText的Dialog，用于接收用户输入，抽象类，子类必须实现`onInputFinished`用于获取输入内容，`onCancelInput`收到取消通知（点击对话框外，按Back键，按取消按钮），不要设置`onCancelListener`
 
 ##License
 >Copyright 2014 AngelDevil
