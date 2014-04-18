@@ -4,6 +4,7 @@ package com.angeldevil.androidutils.dialog;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.widget.EditText;
 
@@ -23,6 +24,8 @@ public abstract class EditTextDialog extends AlertDialog implements DialogInterf
     private CharSequence defaultText;
     private boolean selectTextByDefault;
     private int viewSpacing = 20;
+    private boolean singleLine;
+    private int maxLength;
 
     public EditTextDialog(Context context) {
         super(context);
@@ -73,6 +76,14 @@ public abstract class EditTextDialog extends AlertDialog implements DialogInterf
         setButtons(positive, negative);
     }
 
+    public void setSingleLine(boolean singleLine) {
+        this.singleLine = singleLine;
+    }
+
+    public void setMaxLength(int maxLength) {
+        this.maxLength = maxLength;
+    }
+
     @Override
     public void show() {
         if (!hasButtonsSet) {
@@ -81,9 +92,17 @@ public abstract class EditTextDialog extends AlertDialog implements DialogInterf
         if (input == null) {
             input = new EditText(getContext());
             setView(input, viewSpacing, viewSpacing, viewSpacing, viewSpacing);
+
+            input.setSingleLine(singleLine);
+
+            if (maxLength != 0) {
+                input.setFilters(new InputFilter[] { new InputFilter.LengthFilter(maxLength) });
+            }
+
             if (!TextUtils.isEmpty(hint)) {
                 input.setHint(hint);
             }
+
             if (!TextUtils.isEmpty(defaultText)) {
                 input.setText(defaultText);
                 input.setSelection(input.getText().length());
