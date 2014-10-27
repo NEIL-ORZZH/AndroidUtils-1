@@ -1,5 +1,5 @@
 
-package com.angeldevil.androidutils.preference;
+package me.angeldevil.androidutils.preference;
 
 import android.content.Context;
 import android.support.v7.widget.PopupMenu;
@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import com.angeldevil.androidutils.R;
+import me.angeldevil.androidutils.R;
 
 /**
  * Preference不可点击，但是Summary可点击，Summery点击后弹出定义的菜单，

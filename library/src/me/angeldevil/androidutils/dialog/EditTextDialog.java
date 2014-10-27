@@ -1,5 +1,5 @@
 
-package com.angeldevil.androidutils.dialog;
+package me.angeldevil.androidutils.dialog;
 
 import android.app.AlertDialog;
 import android.content.Context;

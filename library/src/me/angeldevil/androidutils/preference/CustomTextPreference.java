@@ -1,5 +1,5 @@
 
-package com.angeldevil.androidutils.preference;
+package me.angeldevil.androidutils.preference;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -11,7 +11,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import com.angeldevil.androidutils.R;
+import me.angeldevil.androidutils.R;
 
 /**
  * 可以自定义字体大小与颜色的Preference
@@ -43,20 +43,15 @@ public class CustomTextPreference extends Preference {
         TypedArray custom = context.obtainStyledAttributes(attrs, R.styleable.customTextPreference, defStyle, 0);
         for (int i = 0; i < custom.getIndexCount(); i++) {
             int index = custom.getIndex(i);
-            switch (index) {
-                case R.styleable.customTextPreference_titleTextSize:
-                    titleTextSizeInPixel = custom.getDimensionPixelSize(index, 0);
-                    break;
-                case R.styleable.customTextPreference_titleTextColor:
-                    titleColorStateList = custom.getColorStateList(index);
-                    break;
-                case R.styleable.customTextPreference_summaryTextSize:
-                    summaryTextSizeInPixel = custom.getDimensionPixelSize(index, 0);
-                    break;
-                case R.styleable.customTextPreference_summaryTextColor:
-                    summaryColorStateList = custom.getColorStateList(index);
-                    break;
-            }
+			if (index == R.styleable.customTextPreference_titleTextSize) {
+				titleTextSizeInPixel = custom.getDimensionPixelSize(index, 0);
+			} else if (index == R.styleable.customTextPreference_titleTextColor) {
+				titleColorStateList = custom.getColorStateList(index);
+			} else if (index == R.styleable.customTextPreference_summaryTextSize) {
+				summaryTextSizeInPixel = custom.getDimensionPixelSize(index, 0);
+			} else if (index == R.styleable.customTextPreference_summaryTextColor) {
+				summaryColorStateList = custom.getColorStateList(index);
+			}
         }
         custom.recycle();
     }

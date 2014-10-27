@@ -1,5 +1,5 @@
 
-package com.angeldevil.androidutils.io;
+package me.angeldevil.androidutils.io;
 
 import java.io.Closeable;
 import java.io.IOException;

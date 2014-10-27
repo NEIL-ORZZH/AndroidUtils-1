@@ -1,5 +1,5 @@
 
-package com.angeldevil.androidutils.toast;
+package me.angeldevil.androidutils.toast;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

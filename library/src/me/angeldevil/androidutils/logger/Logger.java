@@ -1,5 +1,5 @@
 
-package com.angeldevil.androidutils.logger;
+package me.angeldevil.androidutils.logger;
 
 import android.text.TextUtils;
 import android.util.Log;

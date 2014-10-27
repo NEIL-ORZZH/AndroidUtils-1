@@ -1,11 +1,11 @@
 
-package com.angeldevil.androidutils.preference;
+package me.angeldevil.androidutils.preference;
 
 import android.content.Context;
 import android.preference.PreferenceCategory;
 import android.util.AttributeSet;
 
-import com.angeldevil.androidutils.R;
+import me.angeldevil.androidutils.R;
 
 /**
  * 用于在Preference项之间画一条线，不显示任何图像和文字
